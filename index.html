@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#090909">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src https://res.cloudinary.com; media-src https://res.cloudinary.com; connect-src 'self'; upgrade-insecure-requests">
   <title>Lennaax — mis links</title>
   <link rel="icon" type="image/png" href="https://res.cloudinary.com/dyewoctfu/image/upload/e_background_removal/avatar-face.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,9 +29,11 @@
     .label{font-weight:700;font-size:15px}
     .sub{display:block;color:var(--muted);font-size:12px;margin-top:2px;font-weight:400}
     .arrow{margin-left:auto;color:#8c858a;font-size:20px}
-    .video-bg{position:fixed;z-index:1;top:50%;left:50%;width:120vw;height:120vh;transform:translate(-50%,-50%);border:0;pointer-events:none;filter:blur(4px) brightness(.58) saturate(.9);object-fit:cover;opacity:1}.video-shade{position:fixed;z-index:2;inset:0;pointer-events:none;background:linear-gradient(180deg,#08070bb0,#10080c88 45%,#08070bd9)}footer{margin-top:28px;color:#777078;font-size:11px;letter-spacing:2px;text-transform:uppercase}footer a{color:var(--pink);text-decoration:none}footer a:hover{color:#ff8bc1}
+    .video-bg{position:fixed;z-index:1;top:50%;left:50%;width:130vw;height:130vh;transform:translate(calc(-50% + var(--parallax-x,0px)),calc(-50% + var(--parallax-y,0px))) scale(1.005);transition:transform .35s ease-out;will-change:transform;border:0;pointer-events:none;filter:blur(4px) brightness(.58) saturate(.9);object-fit:cover;opacity:1}.video-shade{position:fixed;z-index:2;inset:0;pointer-events:none;background:linear-gradient(180deg,#08070bb0,#10080c88 45%,#08070bd9)}footer{margin-top:28px;color:#777078;font-size:11px;letter-spacing:2px;text-transform:uppercase}footer a{color:var(--pink);text-decoration:none}footer a:hover{color:#ff8bc1}
     @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-  </style>
+  body.xp-cursor-on, body.xp-cursor-on * { cursor: none !important; }
+  .xp-cursor-dot { position: fixed; z-index: 10000; left: 0; top: 0; width: 15px; height: 15px; border-radius: 50%; pointer-events: none; transform: translate(-50%, -50%); background: radial-gradient(circle at 34% 28%, #f5ff9d 0 8%, var(--xp-color) 32%, #66830e 78%, #3a520a 100%); box-shadow: 0 0 7px var(--xp-color), 0 0 15px color-mix(in srgb, var(--xp-color) 55%, transparent); transition-property: left, top, opacity; transition-timing-function: cubic-bezier(.22,1,.36,1); will-change: left, top; opacity: 0; }
+</style>
 </head>
 <body>
   <video class="video-bg" autoplay muted loop playsinline aria-hidden="true"><source src="https://res.cloudinary.com/dyewoctfu/video/upload/v1795031524/videoplayback_1.mp4" type="video/mp4"></video>
@@ -39,6 +43,7 @@
     <img class="avatar" src="https://res.cloudinary.com/dyewoctfu/image/upload/f_auto/q_auto/6738149c-812b-4df4-9f78-4804a7fdfb94-fullsize.webp" alt="Foto de perfil de Lennaax">
     <h1>Lennaax</h1>
     <p class="handle">@lennaax</p>
+    
     <p class="bio">Un poquito de mí, en todos lados. Elegí dónde nos vemos ✨</p>
     <nav class="links" aria-label="Redes sociales">
       <a class="link" href="https://kick.com/lennaax" target="_blank" rel="noopener noreferrer">
@@ -49,6 +54,10 @@
         <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/></svg></span>
         <span><span class="label">Instagram</span><span class="sub">Fotos, historias y más</span></span><span class="arrow" aria-hidden="true">➜</span>
       </a>
+      <a class="link" href="https://discord.com/invite/rfPA4PPzbT" target="_blank" rel="noopener noreferrer">
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19.7 5.3A18.4 18.4 0 0 0 15.2 4l-.6 1.2a16.8 16.8 0 0 0-5.2 0L8.8 4a18.4 18.4 0 0 0-4.5 1.3C1.5 9.5.7 13.6 1.1 17.7a18.2 18.2 0 0 0 5.5 2.8l1.2-1.9-1.9-.9.5-.4a13 13 0 0 0 11.2 0l.5.4-1.9.9 1.2 1.9a18.2 18.2 0 0 0 5.5-2.8c.5-4.7-.8-8.7-3.2-12.4ZM8.7 15.2c-1.1 0-2-1-2-2.2s.9-2.2 2-2.2 2 1 2 2.2-.9 2.2-2 2.2Zm6.6 0c-1.1 0-2-1-2-2.2s.9-2.2 2-2.2 2 1 2 2.2-.9 2.2-2 2.2Z"/></svg></span>
+        <span><span class="label">Discord</span><span class="sub">Unite a la comunidad</span></span><span class="arrow" aria-hidden="true">➜</span>
+      </a>
       <a class="link" href="https://x.com/lennax333" target="_blank" rel="noopener noreferrer">
         <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.6 22H2.4l7.3-8.4L1.8 2h6.5l4.5 6.7L18.9 2zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20z"/></svg></span>
         <span><span class="label">X</span><span class="sub">Estoy por acá también</span></span><span class="arrow" aria-hidden="true">➜</span>
@@ -57,8 +66,95 @@
     <footer>hecho por <a href="https://akuah.lat" target="_blank" rel="noopener noreferrer">akuah.lat</a></footer>
   </main>
 
+<script>
+const bg = document.querySelector(".video-bg");
+if (bg) {
+  let frame;
+  window.addEventListener("pointermove", event => {
+    if (frame) cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(() => {
+      const x = ((event.clientX / window.innerWidth) - .5) * 8;
+      const y = ((event.clientY / window.innerHeight) - .5) * 6;
+      bg.style.transform = "translate(calc(-50% + " + x.toFixed(1) + "px),calc(-50% + " + y.toFixed(1) + "px)) scale(1.005)";
+    });
+  }, { passive: true });
+}
+</script>
+<script>
+(() => {
+  if (!matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+  const colors = ["#e4f75a", "#d7ed37", "#c9e52f", "#bce02b", "#aeda27", "#a0d325", "#92cc23", "#84c321", "#76b91f", "#69ad1e", "#5da01c", "#528f1b"];
+  const dots = colors.map((color, i) => {
+    const dot = document.createElement("i");
+    dot.className = "xp-cursor-dot";
+    const size = Math.max(4, 13 - i * 0.72);
+    dot.style.width = size + "px";
+    dot.style.height = size + "px";
+    dot.style.setProperty("--xp-color", color);
+    dot.style.opacity = "0";
+    document.body.appendChild(dot);
+    return { el: dot, x: 0, y: 0 };
+  });
+  let targetX = 0, targetY = 0, started = false, raf = 0;
+  const animate = () => {
+    let x = targetX, y = targetY;
+    dots.forEach((dot, i) => {
+      const follow = i === 0 ? 0.42 : 0.30;
+      dot.x += (x - dot.x) * follow;
+      dot.y += (y - dot.y) * follow;
+      dot.el.style.left = dot.x + "px";
+      dot.el.style.top = dot.y + "px";
+      dot.el.style.opacity = String(Math.max(0.18, 1 - i * 0.055));
+      x = dot.x;
+      y = dot.y;
+    });
+    raf = requestAnimationFrame(animate);
+  };
+  window.addEventListener("pointermove", event => {
+    targetX = event.clientX;
+    targetY = event.clientY;
+    if (!started) {
+      dots.forEach(dot => { dot.x = targetX; dot.y = targetY; });
+      started = true;
+      document.body.classList.add("xp-cursor-on");
+      raf = requestAnimationFrame(animate);
+    }
+  }, { passive: true });
+  window.addEventListener("pointerleave", () => {
+    document.body.classList.remove("xp-cursor-on");
+    dots.forEach(dot => { dot.el.style.opacity = "0"; });
+    started = false;
+    cancelAnimationFrame(raf);
+  });
+})();
+</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
